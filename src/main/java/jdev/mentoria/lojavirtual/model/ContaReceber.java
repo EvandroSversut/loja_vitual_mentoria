@@ -5,7 +5,10 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Objects;
 
+<<<<<<< HEAD
 import jakarta.persistence.Column;
+=======
+>>>>>>> origin/master
 import jakarta.persistence.ConstraintMode;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -24,8 +27,12 @@ import jdev.mentoria.lojavirtual.enums.StatusContaReceber;
 
 @Entity
 @Table(name = "conta_receber")
+<<<<<<< HEAD
 @SequenceGenerator(name = "seq_conta_receber", sequenceName = "seq_conta_receber", 
 allocationSize = 1, initialValue = 1)
+=======
+@SequenceGenerator(name = "seq_conta_receber", sequenceName = "seq_conta_receber", allocationSize = 1, initialValue = 1)
+>>>>>>> origin/master
 public class ContaReceber implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -34,6 +41,7 @@ public class ContaReceber implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_conta_receber")
 	private Long id;
 
+<<<<<<< HEAD
 	@Column(nullable = false)
 	private String descricao;
 	
@@ -42,13 +50,23 @@ public class ContaReceber implements Serializable {
 	private StatusContaReceber status;
 	
 	@Column(nullable = false)
+=======
+	private String descricao;
+	
+	@Enumerated(EnumType.STRING)
+	private StatusContaReceber status;
+	
+>>>>>>> origin/master
 	@Temporal(TemporalType.DATE)
 	private Date dtVencimento;
 	
 	@Temporal(TemporalType.DATE)
 	private Date dtPagamento;
 	
+<<<<<<< HEAD
 	@Column(nullable = false)
+=======
+>>>>>>> origin/master
 	private BigDecimal valorTotal;
 	
 	private BigDecimal valorDesconto;
